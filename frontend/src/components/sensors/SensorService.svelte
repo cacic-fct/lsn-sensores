@@ -96,4 +96,21 @@
 			.replace(/ /g, '-');
 		return slug;
 	}
+
+	export function shouldHighlightCard(sensor: Sensor): boolean {
+		switch (sensor.type) {
+			case 'temperature':
+				return sensor.value > 30;
+			case 'humidity':
+				return sensor.value > 70;
+			case 'light':
+				return sensor.value === 1;
+			case 'motion':
+				return sensor.value === 1;
+			case 'smoke':
+				return sensor.value === 1;
+			default:
+				return false;
+		}
+	}
 </script>

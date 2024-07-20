@@ -7,5 +7,8 @@ module.exports = {
 	theme: {
 		extend: {}
 	},
-	plugins: [daisyui, flowbite]
+	plugins: [daisyui, flowbite],
+	daisyui: {
+		themes: ['light']
+	}
 };

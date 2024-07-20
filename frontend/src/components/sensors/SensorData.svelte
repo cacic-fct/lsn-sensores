@@ -21,7 +21,7 @@
 				[
 					{
 						name: 'Luz',
-						value: 0,
+						value: 1,
 						type: 'light'
 					},
 					{

@@ -2,7 +2,7 @@
 	import BrandIcon from './BrandIcon.svelte';
 </script>
 
-<footer class="footer footer-center bg-neutral p-10 text-neutral-content">
+<footer class="footer footer-center bg-neutral text-neutral-content p-10">
 	<aside>
 		<p class="font-bold">
 			<a
@@ -15,7 +15,7 @@
 	</aside>
 	<nav>
 		<div class="grid grid-flow-col gap-4">
-			<a href="https://github.com/cacic-fct/sensores-lsn">
+			<a href="https://github.com/cacic-fct/lsn-sensores">
 				<BrandIcon
 					name="github"
 					width="24"

@@ -1,7 +1,5 @@
 # Sensores LSN
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
-
 ## Site
 
 O site é construído com Svelte e pode ser acessado em [sensores-lsn.cacic.dev.br](https://sensores-lsn.cacic.dev.br).

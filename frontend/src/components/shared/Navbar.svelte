@@ -11,7 +11,7 @@
 	});
 </script>
 
-<div class="navbar bg-base-100">
+<div class="navbar bg-base-100 sticky top-0 z-10">
 	<div class="navbar-start">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -19,7 +19,7 @@
 			</div>
 			<ul class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
 				{#each list as { name, slug }}
-					<li><a class="pt-3.5 h-12" href="#{slug}">{name}</a></li>
+					<li><a class="h-12 pt-3.5" href="#{slug}">{name}</a></li>
 				{/each}
 			</ul>
 		</div>

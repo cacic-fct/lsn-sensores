@@ -1,17 +1,17 @@
 on:
   push:
     paths:
-      - 'frontend/**'
-      - '.github/workflows/frontend.yml'
+      - "frontend/**"
+      - ".github/workflows/frontend.yml"
     branches:
-      - '**'
+      - "**"
 
   pull_request:
     paths:
-      - 'frontend/**'
-      - '.github/workflows/frontend.yml'
+      - "frontend/**"
+      - ".github/workflows/frontend.yml"
     branches:
-      - '**'
+      - "**"
 
 jobs:
   build:

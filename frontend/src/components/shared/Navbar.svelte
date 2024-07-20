@@ -19,7 +19,7 @@
 			</div>
 			<ul class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
 				{#each list as { name, slug }}
-					<li><a href="#{slug}">{name}</a></li>
+					<li><a class="pt-3.5 h-12" href="#{slug}">{name}</a></li>
 				{/each}
 			</ul>
 		</div>
@@ -33,6 +33,6 @@
 		</ul>
 	</div>
 	<div class="navbar-end">
-		<a class="btn"><CalendarSearch /></a>
+		<button class="btn"><CalendarSearch /></button>
 	</div>
 </div>

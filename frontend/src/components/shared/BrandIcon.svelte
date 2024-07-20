@@ -16,6 +16,7 @@
 	let displayIcon = icons[name];
 </script>
 
-<svg class={$$props.class} {width} {height} viewBox="0 0 {displayIcon.box} {displayIcon.box}"
-	>{@html displayIcon.svg}</svg
->
+<svg class={$$props.class} {width} {height} viewBox="0 0 {displayIcon.box} {displayIcon.box}">
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html displayIcon.svg}
+</svg>

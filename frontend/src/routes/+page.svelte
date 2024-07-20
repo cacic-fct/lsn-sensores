@@ -4,7 +4,7 @@
 	import Sections from '../components/sensors/Sections.svelte';
 </script>
 
-<div class="flex h-full h-screen flex-col bg-slate-100">
+<div class="flex h-full flex-col bg-slate-100">
 	<Navbar />
 
 	<main class="m-auto w-full max-w-screen-2xl flex-1 p-4">

@@ -23,7 +23,7 @@
 				{/each}
 			</ul>
 		</div>
-		<a class="text-xl">Sensores LSN</a>
+		<h1 class="text-xl">Sensores LSN</h1>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal px-1">

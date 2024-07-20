@@ -2,7 +2,7 @@
 	import BrandIcon from './BrandIcon.svelte';
 </script>
 
-<footer class="footer footer-center bg-neutral text-neutral-content p-10">
+<footer class="footer footer-center bg-neutral p-10 text-neutral-content">
 	<aside>
 		<p class="font-bold">
 			<a
@@ -20,7 +20,7 @@
 					name="github"
 					width="24"
 					height="24"
-					class="fill-current hover:opacity-50 transition"
+					class="fill-current transition hover:opacity-50"
 					tabindex="0"
 				/>
 			</a>

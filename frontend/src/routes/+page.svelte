@@ -4,10 +4,10 @@
 	import Sections from '../components/sensors/Sections.svelte';
 </script>
 
-<div class="flex flex-col h-screen">
+<div class="flex h-screen flex-col">
 	<Navbar />
 
-	<main class="p-4 flex-1">
+	<main class="flex-1 p-4">
 		<Sections />
 	</main>
 

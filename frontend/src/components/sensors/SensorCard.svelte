@@ -7,16 +7,16 @@
 </script>
 
 {#each sensorGroups as group}
-	<div class="flex m-1 each-line flex-wrap">
+	<div class="each-line m-1 flex flex-wrap">
 		{#each group as sensor}
 			<button
-				class="card card-side card-compact bg-base-100 shadow-xl items-center m-3 same-width min-w-60 hover:cursor-pointer text-left"
+				class="same-width card card-side card-compact m-3 min-w-60 items-center bg-base-100 text-left shadow-xl hover:cursor-pointer"
 				on:click={() => console.log(sensor)}
 			>
 				<div class="m-3">
-					<svelte:component this={getIcon(sensor.type)} class="w-8 h-8" />
+					<svelte:component this={getIcon(sensor.type)} class="h-8 w-8" />
 				</div>
-				<div class="!pl-0 card-body">
+				<div class="card-body !pl-0">
 					<h2 class="card-title !m-0">{sensor.name}</h2>
 					<p class="text-4xl font-semibold">{getValue(sensor)}</p>
 					<p>18/07/2024 14:00</p>

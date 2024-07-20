@@ -11,13 +11,13 @@
 	});
 </script>
 
-<div class="navbar bg-base-100 sticky top-0 z-10">
+<div class="navbar sticky top-0 z-10 bg-base-100">
 	<div class="navbar-start">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
 				<Menu />
 			</div>
-			<ul class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+			<ul class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
 				{#each list as { name, slug }}
 					<li><a class="h-12 pt-3.5" href="#{slug}">{name}</a></li>
 				{/each}

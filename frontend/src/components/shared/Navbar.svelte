@@ -19,7 +19,7 @@
 					<Menu />
 				</div>
 				<ul
-					class="menu dropdown-content menu-sm rounded-box bg-base-100 z-[1] mt-3 w-52 p-2 text-black shadow"
+					class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 text-black shadow"
 				>
 					{#each list as { name, slug }}
 						<li><a class="h-12 pt-3.5" role="button" href="#{slug}">{name}</a></li>

@@ -2,7 +2,7 @@
 	import BrandIcon from './BrandIcon.svelte';
 </script>
 
-<footer class="footer footer-center bg-neutral text-neutral-content p-10">
+<footer class="footer footer-center bg-neutral p-10 text-neutral-content">
 	<aside>
 		<p class="font-bold">
 			<a

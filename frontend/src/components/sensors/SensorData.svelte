@@ -6,13 +6,13 @@
 
 	const dbRef = ref(db);
 
-	get(child(dbRef, `/`)).then((snapshot) => {
-		if (snapshot.exists()) {
-			console.log(snapshot.val());
-		} else {
-			console.log('No data available');
-		}
-	});
+	// get(child(dbRef, `/`)).then((snapshot) => {
+	// 	if (snapshot.exists()) {
+	// 		console.log(snapshot.val());
+	// 	} else {
+	// 		console.log('No data available');
+	// 	}
+	// });
 
 	interface SensorLastReading {
 		valor: string;
@@ -28,9 +28,9 @@
 		try {
 			const lastTemperature = await get(child(dbRef, 'DadosSensores/Temperatura/atual'));
 			const lastHumidity = await get(child(dbRef, 'DadosSensores/Umidade/atual'));
-			const lastLight = await get(child(dbRef, 'DadosSensores/Luz/atual'));
-			const lastMotion = await get(child(dbRef, 'DadosSensores/Presenca/atual'));
-			const lastSmoke = await get(child(dbRef, 'DadosSensores/Chamas/atual'));
+			// const lastLight = await get(child(dbRef, 'DadosSensores/Luz/atual'));
+			// const lastMotion = await get(child(dbRef, 'DadosSensores/Presenca/atual'));
+			// const lastSmoke = await get(child(dbRef, 'DadosSensores/Chamas/atual'));
 			const lastVoltage = await get(child(dbRef, 'DadosSensores/Tensao/atual'));
 			const lastCurrent = await get(child(dbRef, 'DadosSensores/Corrente/atual'));
 			const lastPower = await get(child(dbRef, 'DadosSensores/Potencia/atual'));
@@ -38,9 +38,9 @@
 			return {
 				temperature: lastTemperature.val() as SensorLastReading | null,
 				humidity: lastHumidity.val() as SensorLastReading | null,
-				light: lastLight.val() as SensorLastReading | null,
-				motion: lastMotion.val() as SensorLastReading | null,
-				smoke: lastSmoke.val() as SensorLastReading | null,
+				// light: lastLight.val() as SensorLastReading | null,
+				// motion: lastMotion.val() as SensorLastReading | null,
+				// smoke: lastSmoke.val() as SensorLastReading | null,
 				voltage: lastVoltage.val() as SensorLastReading | null,
 				current: lastCurrent.val() as SensorLastReading | null,
 				power: lastPower.val() as SensorLastReading | null
@@ -80,21 +80,21 @@
 			power: data.power?.data || null
 		};
 
-		let parsedLight: boolean = false;
-		let parsedMotion: boolean = false;
-		let parsedSmoke: boolean = false;
+		// let parsedLight: boolean = false;
+		// let parsedMotion: boolean = false;
+		// let parsedSmoke: boolean = false;
 
-		if (sensorValue.light === 'Acesa') {
-			parsedLight = true;
-		}
+		// if (sensorValue.light === 'Acesa') {
+		// 	parsedLight = true;
+		// }
 
-		if (sensorValue.motion === 'Com movimento') {
-			parsedMotion = true;
-		}
+		// if (sensorValue.motion === 'Com movimento') {
+		// 	parsedMotion = true;
+		// }
 
-		if (sensorValue.smoke === 'Fogo') {
-			parsedSmoke = true;
-		}
+		// if (sensorValue.smoke === 'Fogo') {
+		// 	parsedSmoke = true;
+		// }
 
 		return [
 			{

@@ -4,6 +4,15 @@
 	export let sensorGroups: Sensor[][];
 
 	import { getValue } from './SensorService.svelte';
+
+	import { format } from 'date-fns';
+
+	function formatDate(date: string | null | undefined): string {
+		if (!date) {
+			return 'Data desconhecida';
+		}
+		return format(new Date(date), 'dd/MM/yyyy HH:mm');
+	}
 </script>
 
 {#each sensorGroups as group}
@@ -24,7 +33,7 @@
 				<div class="card-body !pl-1">
 					<h2 class="!m-0 text-lg font-medium">{sensor.name}</h2>
 					<p class="text-4xl font-semibold">{getValue(sensor)}</p>
-					<p>18/07/2024 14:00</p>
+					<p>{formatDate(sensor.lastReading)}</p>
 				</div>
 			</div>
 		{/each}

@@ -2,19 +2,21 @@
 	import type { ComponentType } from 'svelte';
 	import type { Icon } from 'lucide-svelte';
 
-	export type Sensor = {
+	export type BoolSensor = {
 		name: string;
-		value: number;
-		type:
-			| 'temperature'
-			| 'humidity'
-			| 'voltage'
-			| 'current'
-			| 'power'
-			| 'motion'
-			| 'smoke'
-			| 'light';
+		value: boolean | null;
+		type: 'motion' | 'smoke' | 'light';
+		lastReading?: string | null;
 	};
+
+	export type NumSensor = {
+		name: string;
+		value: number | null;
+		type: 'temperature' | 'humidity' | 'voltage' | 'current' | 'power';
+		lastReading?: string | null;
+	};
+
+	export type Sensor = BoolSensor | NumSensor;
 
 	export type SensorGroup = {
 		name: string;
@@ -25,25 +27,22 @@
 	export function getValue(sensor: Sensor) {
 		switch (sensor.type) {
 			case 'temperature':
-				return `${sensor.value.toFixed(0)}°`;
+				return `${sensor.value?.toFixed(0)}°`;
 			case 'humidity':
-				return `${sensor.value.toFixed(0)}%`;
+				return `${sensor.value?.toFixed(0)}%`;
+			case 'voltage':
+				return `${sensor.value?.toFixed(0)}V`;
+			case 'current':
+				return `${sensor.value?.toFixed(2)}A`;
+			case 'power':
+				return `${sensor.value?.toFixed(0)}VA`;
+
+			case 'smoke':
+				return sensor.value ? 'Detectada' : 'Não detectada';
 			case 'light':
 				return sensor.value ? 'Ligada' : 'Desligada';
 			case 'motion':
 				return sensor.value ? 'Detectado' : 'Não detectado';
-			case 'voltage':
-				return `${sensor.value.toFixed(0)}V`;
-
-			case 'current':
-				return `${sensor.value.toFixed(2)}A`;
-			case 'power':
-				return `${sensor.value.toFixed(0)}VA`;
-			case 'smoke':
-				return sensor.value ? 'Detectada' : 'Não detectada';
-
-			default:
-				return sensor.value.toFixed(0);
 		}
 	}
 
@@ -100,15 +99,20 @@
 	export function shouldHighlightCard(sensor: Sensor): boolean {
 		switch (sensor.type) {
 			case 'temperature':
+				if (sensor.value === null) return true;
 				return sensor.value > 30;
 			case 'humidity':
+				if (sensor.value === null) return true;
 				return sensor.value > 70;
 			case 'light':
-				return sensor.value === 1;
+				if (sensor.value === null) return true;
+				return sensor.value;
 			case 'motion':
-				return sensor.value === 1;
+				if (sensor.value === null) return true;
+				return sensor.value;
 			case 'smoke':
-				return sensor.value === 1;
+				if (sensor.value === null) return true;
+				return sensor.value;
 			default:
 				return false;
 		}

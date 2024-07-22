@@ -6,7 +6,7 @@ export default defineConfig({
 	build: {
 		target: 'ES2022',
 		rollupOptions: {
-			external: ['firebase/database']
+			external: ['firebase/database', 'firebase/app']
 		}
 	}
 });

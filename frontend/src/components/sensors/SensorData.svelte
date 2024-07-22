@@ -30,7 +30,7 @@
 			const lastHumidity = await get(child(dbRef, 'DadosSensores/Umidade/atual'));
 			const lastLight = await get(child(dbRef, 'DadosSensores/Luz/atual'));
 			const lastMotion = await get(child(dbRef, 'DadosSensores/Presenca/atual'));
-			const lastSmoke = await get(child(dbRef, 'DadosSensores/Fumaca/atual'));
+			const lastSmoke = await get(child(dbRef, 'DadosSensores/Chamas/atual'));
 			const lastVoltage = await get(child(dbRef, 'DadosSensores/Tensao/atual'));
 			const lastCurrent = await get(child(dbRef, 'DadosSensores/Corrente/atual'));
 			const lastPower = await get(child(dbRef, 'DadosSensores/Potencia/atual'));

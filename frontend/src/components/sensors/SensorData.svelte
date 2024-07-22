@@ -6,13 +6,13 @@
 
 	const dbRef = ref(db);
 
-	// get(child(dbRef, `/`)).then((snapshot) => {
-	// 	if (snapshot.exists()) {
-	// 		console.log(snapshot.val());
-	// 	} else {
-	// 		console.log('No data available');
-	// 	}
-	// });
+	get(child(dbRef, `/`)).then((snapshot) => {
+		if (snapshot.exists()) {
+			console.log(snapshot.val());
+		} else {
+			console.log('No data available');
+		}
+	});
 
 	interface SensorLastReading {
 		valor: string;
@@ -115,26 +115,26 @@
 							lastReading: sensorTimestamp.humidity
 						}
 					],
-					[
-						{
-							name: 'Luz',
-							value: parsedLight,
-							type: 'light',
-							lastReading: sensorTimestamp.light
-						},
-						{
-							name: 'Movimento',
-							value: parsedMotion,
-							type: 'motion',
-							lastReading: sensorTimestamp.motion
-						},
-						{
-							name: 'Fumaça',
-							value: parsedSmoke,
-							type: 'smoke',
-							lastReading: sensorTimestamp.smoke
-						}
-					],
+					// [
+					// 	{
+					// 		name: 'Luz',
+					// 		value: parsedLight,
+					// 		type: 'light',
+					// 		lastReading: sensorTimestamp.light
+					// 	},
+					// 	{
+					// 		name: 'Movimento',
+					// 		value: parsedMotion,
+					// 		type: 'motion',
+					// 		lastReading: sensorTimestamp.motion
+					// 	},
+					// 	{
+					// 		name: 'Fumaça',
+					// 		value: parsedSmoke,
+					// 		type: 'smoke',
+					// 		lastReading: sensorTimestamp.smoke
+					// 	}
+					// ],
 
 					[
 						{

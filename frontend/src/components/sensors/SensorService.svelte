@@ -100,10 +100,10 @@
 		switch (sensor.type) {
 			case 'temperature':
 				if (sensor.value === null) return true;
-				return sensor.value > 30;
+				return sensor.value >= 27 || sensor.value <= 10;
 			case 'humidity':
 				if (sensor.value === null) return true;
-				return sensor.value > 70;
+				return sensor.value > 80 || sensor.value < 8;
 			case 'light':
 				if (sensor.value === null) return true;
 				return sensor.value;
